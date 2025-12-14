@@ -1,0 +1,51 @@
+#Options
+GenerateScanner = true
+GenerateParser = false
+Language = Java
+ScannerName = Lexico
+ScannerCaseSensitive = true
+ScannerTable = Compact
+Input = String
+#RegularDefinitions
+mai: [A-Z]
+min: [a-z]
+dig: [0-9]
+
+letra: {mai} | {min}
+
+//comentario linha
+//linha:
+
+//comentario de bloco: "(*"[^\(\*\)]*"*)" 
+#Tokens
+id: {letra}+ {dig}?
+cte_int: {dig}+
+//cte_float:
+//cte_string:
+
+//palavras reservadas
+pr_add       = id: "add"
+pr_elementof = id: "elementof"
+
+//simbolos especiais
+"+"
+"-"
+"/"
+"*"
+"<"
+">"
+"("
+")"
+";"
+","
+"~="
+"=="
+"<-"
+
+//reconhecer e ignorar 
+//caracteres de formatação
+:[\n\t\s]
+
+//reconhere e ignorar
+//comentarios
+:!{bloco}

@@ -1,0 +1,14 @@
+//programa fonte:
+// Ler a base e a altura de um triângulo retângulo, calcular e escrever a área. 
+// fórmula: 	área = (base * altura) / 2
+//              onde: base e altura são valores do tipo int
+
+begin
+  int base, altura;
+  float area;
+
+  read ("digite base: ", base, "digite altura: ",altura);
+  area = base * altura / 2;
+  print (area);
+end
+
